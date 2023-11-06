@@ -1,0 +1,56 @@
+table, th, td, tr{
+    border: 1px solid black;
+}
+.border-shadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+
+    .custom-table th, .custom-table td {
+    border: 2px solid #131111;
+    padding: 8px;
+    text-align: left;
+    }
+    .custom-table th.service,
+    .custom-table td.service {
+    width: 5%;
+    }
+
+    .custom-table th.url,
+    .custom-table td.url {
+    width: 15%;
+    }
+    .custom-table th.method,
+    .custom-table td.method {
+    width: 5%;
+    }
+    .custom-table th.request,
+    .custom-table td.request {
+    width: 20%;
+    }
+    .custom-table th.response,
+    .custom-table td.response {
+    width: 20%;
+    }
+
+    .custom-table th.description,
+    .custom-table td.description {
+    width: 35%;
+    }
+    .get{
+        color: greenyellow;
+    }
+    .post{
+        color: orange;
+    }
+    .put{
+        color: lightblue;
+    }
+    .delete{
+        color: red;
+    }

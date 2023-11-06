@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td, tr{
+            border: 1px solid black;
+        }
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            }
+
+            .custom-table th, .custom-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            }
+
+            .custom-table th.service,
+            .custom-table td.service {
+            width: 5%;
+            }
+
+            .custom-table th.url,
+            .custom-table td.url {
+            width: 15%;
+            }
+            .custom-table th.method,
+            .custom-table td.method {
+            width: 5%;
+            }
+            .custom-table th.request,
+            .custom-table td.request {
+            width: 20%;
+            }
+            .custom-table th.response,
+            .custom-table td.response {
+            width: 20%;
+            }
+
+            .custom-table th.description,
+            .custom-table td.description {
+            width: 35%;
+            }
+            .get{
+                color: greenyellow;
+            }
+            .post{
+                color: orange;
+            }
+            .put{
+                color: lightblue;
+            }
+            .delete{
+                color: lightred;
+            }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+        <tr>
+            <th>
+                <strong>Name</strong>
+            </th>
+            <td>
+                <strong>Nguyen Anh Viet </strong>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                    <strong>Date of birth: </strong>
+            </th>
+            <td>
+                    <strong>08/07/2002 </strong>
+            </td>
+        </tr>
+         <tr>
+                <th>
+                        <strong>Main language:</strong>
+                </th>
+                <td>
+                        <strong>NodeJS, ReactJS, GoLang </strong>
+                </td>
+        </tr>
+         <tr>
+            <th>
+                    <strong>Description:</strong>
+            </th>
+            <td>
+            <strong>I'm Viet or you can call me IrcnV. I learned at FPT University, now i'm a intership student of the soft company. I have
+            a passion about new thing especially new technology. I'm never give up to approach my dream. My favorite quote is :'There is no
+            other side'. This popular quote in 'bojack horseman' film. That mean, there isn't other world after death. So keep move on and 
+            live like no tomorrow!!!
+            </strong>
+        </td>
+        </tr>
+         <tr>
+                    <th>
+                            <strong>Github: </strong>
+                    </th>
+                    <td>
+                            <strong><a href="https://github.com/Anh467">My Github</a> </strong>
+                    </td>
+            </tr>
+    </tbody>
+    </table>
+    <h1>1. API about SHOP http://ircnv.id.vn:8080</h1>
+    <p>U can test connection using 
+        <strong>
+            <a href="http://ircnv.id.vn:8080/ping">
+                http://ircnv.id.vn:8080/ping
+            </a>
+        </strong> if response is "pinghhhhhhhhhhhhh" that mean connection is good
+    </p>
+    <table class="custom-table">
+        <thead>
+          <tr>
+            <th class="service">service</th>
+            <th class="url">url</th>
+            <th class="method">Method</th>
+            <th class="request">request</th>
+            <th class="request">response</th>
+            <th class="description">description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <div class="Authen">
+            <tr>
+                <td rowspan="2">Users</td>
+                
+                <td>/v1/api/authen/signin</td>
+                <td class="get">GET</td>
+                <td>Request Body <br>
+                    <span >
+                        <pre>
+    {
+        "email": "admin@example.com",
+        "password": "hashed_password"
+    }
+                        </pre>
+                    </span>
+                </td>
+                <td> Response Data </br>
+                    <pre>
+    {
+        "user": {
+            "userid": 1,
+            "fullname": "Lê Thị Thu",
+            "email": "example@example.com",
+            "role": "example",
+            "token": "exampledtoken"
+        }
+    }
+                    </pre>
+                </td>
+                <td>Khi dữ liệu được respone về nên lưu token vào cookie hoặc local storage 
+                    để người dùng muốn yêu cầu gì đó có thể gửi token đó đến server</td>
+            </tr>
+            <tr>
+                <td >/v1/api/user/create</td>
+                <td class="post">POST</td>
+                <td>Request Body
+                    <pre>
+    {
+        "fullname": "example name",
+        "email": "example@gmail.com",
+        "password": "exmaplepassword",
+        "address":"exmaple address"
+    }
+                    </pre>
+                </td>
+                <td>Response Data
+                    <pre>
+    {
+        "user": {
+            "userid": 1,
+            "fullname": "Lê Thị Thu",
+            "email": "example@example.com",
+            "role": "example",
+            "token": "exampledtoken"
+        }
+    }
+                    </pre>
+                </td>
+                <td>Khi dữ liệu được respone về nên lưu token vào cookie hoặc local storage 
+                    để người dùng muốn yêu cầu gì đó có thể gửi token đó đến server</td>
+            </tr>
+        </div>
+        <div class="Carts">
+            <tr>
+              <td rowspan="5">Users</td>
+              
+              <td>/v1/api/cart/:userid </br>
+                  <ul>
+                      <li>userid: id của người dùng muốn xóa </li>
+                  </ul>
+              </td>
+              <td class="get">GET</td>
+              <td>Request Header </br>
+                <pre>
+    token: "exampledtoken"
+                </pre>
+              </td>
+              <td>Response Data
+                <pre>
+    {
+        "cart": [
+            {
+                "userid": 1,
+                "productid": 1,
+                "quantity": 5,
+                "product": {
+                    "productid": 1,
+                    "name": "Áo loong heheheh",
+                    "description": "Áo khoác nam dáng dài",
+                    "price": 109.99,
+                    "Category": {
+                        "categoryid": 0,
+                        "name": ""
+                    },
+                    "categoryid": 2,
+                    "image": ""
+                }
+            },
+            {
+                "userid": 1,
+                "productid": 2,
+                "quantity": 12,
+                "product": {
+                    "productid": 2,
+                    "name": "Quần jeans đen",
+                    "description": "Quần jeans nam màu đen",
+                    "price": 39.99,
+                    "Category": {
+                        "categoryid": 0,
+                        "name": ""
+                    },
+                    "categoryid": 2,
+                    "image": ""
+                }
+            },
+        ],
+        "length": 5
+    }
+                </pre>
+              </td>
+              <td>Những người nào là sở hữu chỉnh cái kho đó thì mới có quyền yêu cầu lấy danh sách cart của người dùng đó</td>
+            </tr>
+            <tr>
+              <td >URL Data</td>
+              <td class="get">GET</td>
+              <td>Request Data</td>
+              <td>Response Data</td>
+              <td>Description Data</td>
+            </tr>
+            <tr>
+              <td >URL Data</td>
+              <td class="get">GET</td>
+              <td>Request Data</td>
+              <td>Response Data</td>
+              <td>Description Data</td>
+            </tr>
+            <tr>
+                <td >URL Data</td>
+                <td class="get">GET</td>
+                <td>Request Data</td>
+                <td>Response Data</td>
+                <td>Description Data</td>
+              </tr>
+              <tr>
+                <td >URL Data</td>
+                <td class="get">GET</td>
+                <td>Request Data</td>
+                <td>Response Data</td>
+                <td>Description Data</td>
+              </tr>
+          </div>
+        <div class="Users">
+          <tr>
+            <td rowspan="3">Users</td>
+            
+            <td>v1/api/user/:userid </br>
+                <ul>
+                    <li>userid: id của người dùng muốn xóa </li>
+                </ul>
+            </td>
+            <td class="get">GET</td>
+            <td>Request Data</td>
+            <td>Response Data</td>
+            <td>Description Data</td>
+          </tr>
+          <tr>
+            <td >URL Data</td>
+            <td class="get">GET</td>
+            <td>Request Data</td>
+            <td>Response Data</td>
+            <td>Description Data</td>
+          </tr>
+          <tr>
+            <td >URL Data</td>
+            <td class="get">GET</td>
+            <td>Request Data</td>
+            <td>Response Data</td>
+            <td>Description Data</td>
+          </tr>
+        </div>
+        </tbody>
+      </table>
+      
+</body>
+</html>
