@@ -1,0 +1,31 @@
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    margin-left: 220px;
+    padding: 20px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
