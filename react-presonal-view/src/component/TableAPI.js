@@ -22,7 +22,7 @@ function ApiService({service}){
                 {service.router[0].response.map(ele =>{
                     return(
                       <React.Fragment>
-                        {ele.type} <br/>
+                       <strong>{ele.type}</strong> <br/>
                         {ele.detail}
                       </React.Fragment>
                     )

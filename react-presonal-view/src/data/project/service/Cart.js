@@ -1,6 +1,5 @@
 import React from 'react' // nạp thư viện react
 import ReactDOM from 'react-dom' // nạp thư viện react-dom
-import {ListRes, GetRes} from './CartJson'
 export const Cart = {
     service: 'Cart',
     router: [
@@ -47,16 +46,7 @@ export const Cart = {
             request: [
                 {
                     type: 'Request Body',
-                    detail:<span>
-                    <pre>
-                      {"{"}
-                      {"\n"}
-                      {"    "}"quantity" :17{"\n"}
-                      {"}"}
-                      {"\n"}
-                      {"    "}
-                    </pre>
-                  </span>
+                    detail:'Send attribute [quantity (number)]'
                   ,
                     type: 'Request Header',
                     detail:`token : "exampledtoken"`
@@ -97,6 +87,12 @@ export const Cart = {
             method: 'DELETE',
             description: 'Just user who own their cart can delete',
             request: [
+                {
+                    type: 'Request Header',
+                    detail:`
+                        token : "exampledtoken"
+                    `
+                }
             ],
             response: [
                 {

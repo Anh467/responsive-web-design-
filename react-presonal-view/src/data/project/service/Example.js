@@ -10,7 +10,7 @@ export const Example = {
             request: [
                 {
                     type: 'RequestBody',
-                    detail:`json`
+                    detail:`Send attribute [quantity (number)]`
                 }
             ],
             response: [
