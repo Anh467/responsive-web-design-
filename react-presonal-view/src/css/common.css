@@ -14,7 +14,7 @@
   border-radius: 10px ;
   border: transparent;
 }
-.button-indicate, .fa-download:hover{
+.button-indicate:hover, .fa-download:hover{
   background-color: antiquewhite;
 }
 .fa-download{
