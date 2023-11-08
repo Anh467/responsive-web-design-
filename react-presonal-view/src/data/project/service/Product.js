@@ -73,7 +73,7 @@ export const Product = {
         },
         {
             url: '/v1/api/product/list?limit=10&offset=1',
-            method: 'PUT',
+            method: 'GET',
             description: 'This featue for everyone include user, if you not pass limit and offset value it will default is 5 and 0 respectively',
             request: [
                 {
@@ -90,7 +90,7 @@ export const Product = {
         },
         {
             url: '/v1/api/product/list/:categoryid?limit=10&offset=1',
-            method: 'PUT',
+            method: 'GET',
             description: 'This featue for everyone include user. Help user can request product that they want, if you not pass limit and offset value it will default is 5 and 0 respectively',
             request: [
                 {

@@ -8,7 +8,7 @@ function ApiService({service}){
             <tr id={service.id.toLowerCase()}>
               <td rowSpan={service.router.length}>{service.service}</td>
               <td>{service.router[0].url}</td>
-              <td className="get">{service.router[0].method}</td>
+              <td className={service.router[0].method.toLowerCase()}>{service.router[0].method}</td>
               <td>
                 {service.router[0].request.map(ele =>{
                   return(

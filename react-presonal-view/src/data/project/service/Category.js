@@ -88,7 +88,7 @@ export const Category = {
             ]
         },
         {
-            url: '/v1/api/category',
+            url: '/v1/api/category?limit=2&offset=0',
             method: 'GET',
             description: 'get all categories but everyone have permission to do this',
             request: [
