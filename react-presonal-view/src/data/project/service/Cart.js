@@ -25,7 +25,7 @@ export const Cart = {
         {
             url: '/v1/api/cart/:userid/:productid',
             method: 'GET',
-            description: 'Những người nào là admin hoặc sở hữu chỉnh cái kho đó thì mới có quyền yêu cầu lấy danh sách cart của người dùng đó',
+            description: `Only those who are admins or owners of that warehouse have the right to request that user's cart list`,
             request: [
                 {
                     type: 'Request Header',

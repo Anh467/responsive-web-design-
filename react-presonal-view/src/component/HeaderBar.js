@@ -1,5 +1,6 @@
 import React, {useState} from 'react' // nạp thư viện react
 import '../css/common.css'
+import UrlRouter from './content/UrlRouter';
 window.addEventListener('scroll', function() {
   const headerBar = document.getElementById('header-bar'); 
   const menuButton = document.getElementById('menu-button');
@@ -17,40 +18,9 @@ function w3_open() {
 function w3_close() {
   document.getElementById("header-bar").style.display = "none";
 }
-document.querySelectorAll('.sidebar a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
-    
-    if (targetElement) {
-      window.scrollTo({
-        behavior: 'smooth',
-        top: targetElement.offsetTop,
-      });
-    }
-  });
-});
 
-function UrlRouter({routers}){
-  return(
-    <React.Fragment>
-      <p class='w3-bar-item w3-button'>Router list</p>
-      <ul class='sidebar'>
-        {
-            routers.map(ele=>{
-              return (
-                <li>
-                  <a href={'#'+ele.id}>{ele.service}</a>
-                </li>
-              )
-            })
-        }
-      </ul>
-    </React.Fragment>
-  )
-}
+
+
 
 export default function HeaderBar({ProjectInfomation, routers}) {
   return (
@@ -60,20 +30,20 @@ export default function HeaderBar({ProjectInfomation, routers}) {
                 <a href="/" className="w3-bar-item w3-button">Home</a>
                 {ProjectInfomation.map( ele =>{
                   return (
-                    <a href={ele.url} className="w3-bar-item w3-button">{ele.name}</a>
+                    <a href={'#/'+ele.url} className="w3-bar-item w3-button">{ele.name}</a>
                   )
                 })}
                 <div class="long-horizontal-line" ></div>
                 
                 {routers && <UrlRouter routers={routers.api}/>}
                 
-            </div>
-            <div className="w3-teal">
-                <button id='menu-button' className="w3-button w3-teal w3-xlarge" onClick={w3_open}>☰</button>
-                <div className="w3-container">
-                    <h1>My Page</h1>
-                </div>
-            </div>
+          </div>
+          <div className="w3-teal mb-20">
+              <button id='menu-button' className="w3-button w3-teal w3-xlarge" onClick={w3_open}>☰</button>
+              <div className="w3-container">
+                  <h1>My Page</h1>
+              </div>
+          </div>
 
     </React.Fragment>
   )

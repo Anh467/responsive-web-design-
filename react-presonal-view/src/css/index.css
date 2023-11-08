@@ -57,3 +57,6 @@ table, th, td, tr{
     html {
         scroll-behavior: smooth;
       }
+    .mb-20{
+        margin-bottom: 20px;
+    }

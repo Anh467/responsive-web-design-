@@ -8,7 +8,7 @@ import {ProjectInfomation} from './data/ProjectInfomation'
 import HeaderBar from './component/HeaderBar';
 import Layout from './component/Layout';
 import Home from './component/home/Home';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
 
 
 
@@ -21,7 +21,7 @@ function App() {
         <React.Fragment>
             
               
-            <BrowserRouter>
+            <HashRouter>
               <Routes>
                 <Route path="/" element={
                   <React.Fragment>
@@ -51,7 +51,7 @@ function App() {
                   }
               </Routes>
               
-            </BrowserRouter>
+            </HashRouter>
         </React.Fragment>
     )
 }

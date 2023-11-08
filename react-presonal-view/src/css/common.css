@@ -9,3 +9,11 @@
   width: 100%;
   margin: 10px 0 10px 0;
 }
+.button-indicate{
+  background-color: transparent;
+  border-radius: 10px ;
+  border: transparent;
+}
+.button-indicate:hover{
+  background-color: antiquewhite;
+}
