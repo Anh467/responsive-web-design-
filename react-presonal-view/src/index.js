@@ -23,8 +23,18 @@ function App() {
               
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<UserInfor UserInfor={UserInformations}></UserInfor>}/>
-                <Route path="/home" element={<UserInfor UserInfor={UserInformations}></UserInfor>} />
+                <Route path="/" element={
+                  <React.Fragment>
+                    <HeaderBar ProjectInfomation={ProjectInfomation} ></HeaderBar>
+                    <UserInfor UserInfor={UserInformations}></UserInfor>
+                  </React.Fragment>
+                }/>
+                <Route path="/home" element={
+                  <React.Fragment>
+                    <HeaderBar ProjectInfomation={ProjectInfomation} ></HeaderBar>
+                    <UserInfor UserInfor={UserInformations}></UserInfor>
+                  </React.Fragment>
+                } />
                   {
                     ProjectInfomation.map(ele=>{
                       

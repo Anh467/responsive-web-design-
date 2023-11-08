@@ -35,17 +35,20 @@ document.querySelectorAll('.sidebar a').forEach(anchor => {
 
 function UrlRouter({routers}){
   return(
-    <ul class='sidebar'>
-      {
-          routers.map(ele=>{
-            return (
-              <li>
-                <a href={'#'+ele.id}>{ele.service}</a>
-              </li>
-            )
-          })
-      }
-    </ul>
+    <React.Fragment>
+      <p class='w3-bar-item w3-button'>Router list</p>
+      <ul class='sidebar'>
+        {
+            routers.map(ele=>{
+              return (
+                <li>
+                  <a href={'#'+ele.id}>{ele.service}</a>
+                </li>
+              )
+            })
+        }
+      </ul>
+    </React.Fragment>
   )
 }
 
@@ -61,8 +64,9 @@ export default function HeaderBar({ProjectInfomation, routers}) {
                   )
                 })}
                 <div class="long-horizontal-line" ></div>
-                <p class='w3-bar-item w3-button'>Router list</p>
-                <UrlRouter routers={routers.api}/>
+                
+                {routers && <UrlRouter routers={routers.api}/>}
+                
             </div>
             <div className="w3-teal">
                 <button id='menu-button' className="w3-button w3-teal w3-xlarge" onClick={w3_open}>☰</button>
