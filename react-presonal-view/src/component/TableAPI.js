@@ -68,7 +68,8 @@ function ApiService({service}){
     )
 }
 function Api({array}){
-    return (<>
+    return (
+      <div style={{overflowX:"auto"}}>
         <table className="custom-table">
           <thead>
             <tr>
@@ -90,7 +91,7 @@ function Api({array}){
             }
           </tbody>
         </table>
-      </>
+      </div>
       )
 }
 export default function TableAPI({Project}) {

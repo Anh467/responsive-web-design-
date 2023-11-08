@@ -1,6 +1,6 @@
 import React from 'react' // nạp thư viện react
 import ReactDOM from 'react-dom' // nạp thư viện react-dom
-export const Example = {
+export const User = {
     id: 'user',
     service: 'User',
     router: [

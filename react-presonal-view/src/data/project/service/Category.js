@@ -86,6 +86,19 @@ export const Category = {
                     detail:`Data of category which just request will be sent`
                 }
             ]
+        },
+        {
+            url: '/v1/api/category',
+            method: 'GET',
+            description: 'get all categories but everyone have permission to do this',
+            request: [
+            ],
+            response: [
+                {
+                    type: 'Response Data',
+                    detail:`List of categoris which just request will be Responsed`
+                }
+            ]
         }
     ]
     

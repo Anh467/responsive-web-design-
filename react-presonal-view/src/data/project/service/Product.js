@@ -89,6 +89,27 @@ export const Product = {
             ]
         },
         {
+            url: '/v1/api/product/list/:categoryid?limit=10&offset=1',
+            method: 'PUT',
+            description: 'This featue for everyone include user. Help user can request product that they want, if you not pass limit and offset value it will default is 5 and 0 respectively',
+            request: [
+                {
+                    type: 'Request Param',
+                    detail:`Send attribute [limit (number), offset (number)]`
+                },
+                {
+                    type: 'Request Url',
+                    detail:`Send attribute [/:category (number)]`
+                },
+            ],
+            response: [
+                {
+                    type: 'ResponseData',
+                    detail:`The information of products what that categoryid that you want to get`
+                }
+            ]
+        },
+        {
             url: '/v1/api/product/get/:productid',
             method: 'PUT',
             description: 'This featue for everyone include user ',
