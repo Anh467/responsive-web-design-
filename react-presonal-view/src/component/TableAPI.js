@@ -1,10 +1,11 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function ApiService({service}){
     if (service.router == 0 ) return
     const [, ...newArray] = service.router ;
     return (
         <React.Fragment >
-            <tr>
+            <tr id={service.id.toLowerCase()}>
               <td rowSpan={service.router.length}>{service.service}</td>
               <td>{service.router[0].url}</td>
               <td className="get">{service.router[0].method}</td>
@@ -94,6 +95,7 @@ function Api({array}){
 }
 export default function TableAPI({Project}) {
   return (
+    
     <React.Fragment> 
         <React.Fragment>
         <div

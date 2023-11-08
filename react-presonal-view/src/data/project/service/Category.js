@@ -1,6 +1,7 @@
 import React from 'react' // nạp thư viện react
 import ReactDOM from 'react-dom' // nạp thư viện react-dom
 export const Category = {
+    id: 'category',
     service: 'Category',
     router: [
         {

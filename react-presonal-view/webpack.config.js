@@ -20,6 +20,13 @@ module.exports = {
       }
     ]
   },
+  // config for router
+  /*
+    i getting error cannot get /router this problem happen when using with webpack
+  */
+  devServer: {
+    historyApiFallback: true,
+  },
   // Chứa các plugins sẽ cài đặt trong tương lai
   plugins: [
     new HtmlWebpackPlugin({

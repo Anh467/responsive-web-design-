@@ -54,3 +54,6 @@ table, th, td, tr{
     .delete{
         color: red;
     }
+    html {
+        scroll-behavior: smooth;
+      }
