@@ -94,33 +94,33 @@ function Api({array}){
       )
 }
 export default function TableAPI({Project}) {
-  return (
-    
+  return (   
     <React.Fragment> 
-        <React.Fragment>
-        <div
-            className='border-shadow' 
-            style={{
-              width: "90%",
-              margin: "0 auto",  
-              display: "flex",
-              flexDirection: "column",
-            }}>
-          <h3><strong>{Project.name}:</strong> {Project.description}</h3>
-          <p><strong>Language</strong> {Project.language}</p>
-          <p><strong>Technology</strong> {Project.technology.map( (ele, index) => {return (
-                                                                                    <React.Fragment>
-                                                                                      {ele}
-                                                                                      {index < Project.technology.length - 1 ? ', ' : ''}
-                                                                                    </React.Fragment>
-                                                                                  )})}
-          </p>
-          <p>
-              {Project.description}
-              <Api array={Project.api}></Api>
-          </p>
-        </div>
         
+        <React.Fragment>
+          <div
+              id= "container"
+              className='border-shadow' 
+              style={{
+                width: "90%",
+                margin: "0 auto",  
+                display: "flex",
+                flexDirection: "column",
+              }}>
+            <h3><strong>{Project.name}:</strong> {Project.description}</h3>
+            <p><strong>Language</strong> {Project.language}</p>
+            <p><strong>Technology</strong> {Project.technology.map( (ele, index) => {return (
+                                                                                      <React.Fragment>
+                                                                                        {ele}
+                                                                                        {index < Project.technology.length - 1 ? ', ' : ''}
+                                                                                      </React.Fragment>
+                                                                                    )})}
+            </p>
+            <p>
+                {Project.description}
+                <Api array={Project.api}></Api>
+            </p>
+        </div>
         </React.Fragment>
     </React.Fragment>
   )

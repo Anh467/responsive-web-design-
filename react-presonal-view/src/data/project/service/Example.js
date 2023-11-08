@@ -12,6 +12,10 @@ export const Example = {
                 {
                     type: 'RequestBody',
                     detail:`Send attribute [quantity (number)]`
+                },
+                {
+                    type: 'Request Header',
+                    detail:`token :exmapledtoken`
                 }
             ],
             response: [
