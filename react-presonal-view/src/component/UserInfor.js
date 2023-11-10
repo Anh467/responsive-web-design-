@@ -17,7 +17,7 @@ function Infor({UserInfor}){
 }
 export default function UserInfor({UserInfor}) {
   return (
-    <table  style={{
+    <table className='border-shadow' style={{
                   textAlign: 'left', marginBottom: "60px", 
                   width: "95%", marginRight: "auto",  marginLeft: "auto",
                   display: "flex", flexDirection: "column",
