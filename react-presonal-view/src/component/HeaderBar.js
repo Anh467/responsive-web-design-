@@ -30,7 +30,7 @@ export default function HeaderBar({ProjectInfomation, routers}) {
                 <a href="/" className="w3-bar-item w3-button">Home</a>
                 {ProjectInfomation.map( ele =>{
                   return (
-                    <a href={'#/'+ele.url} className="w3-bar-item w3-button">{ele.name}</a>
+                    <a href={'/'+ele.url} className="w3-bar-item w3-button">{ele.name}</a>
                   )
                 })}
                 <div class="long-horizontal-line" ></div>

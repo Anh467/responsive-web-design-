@@ -21,7 +21,7 @@ function App() {
         <React.Fragment>
             
               
-            <HashRouter>
+            <BrowserRouter>
               <Routes>
                 <Route path="/" element={
                   <React.Fragment>
@@ -51,7 +51,7 @@ function App() {
                   }
               </Routes>
               
-            </HashRouter>
+            </BrowserRouter>
         </React.Fragment>
     )
 }
