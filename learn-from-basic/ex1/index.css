@@ -1,0 +1,9 @@
+.color-orange{
+    color:orange
+  }
+
+  code{
+    background-color: rgb(160, 167, 172);
+    border-radius: 5px;
+    padding: 5px;
+  }
