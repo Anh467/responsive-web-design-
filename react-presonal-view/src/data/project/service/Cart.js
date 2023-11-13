@@ -5,7 +5,7 @@ export const Cart = {
     service: 'Cart',
     router: [
         {
-            url: '/v1/api/cart/:userid',
+            url: '/v1/api/cart',
             method: 'GET',
             description: `Only those who are admins or owners of that warehouse have the right to request to get the cart list. Only those who are admins or owners of that warehouse have the right to request to get that user's cart list`,
             request: [
@@ -23,7 +23,7 @@ export const Cart = {
             ]
         },
         {
-            url: '/v1/api/cart/:userid/:productid',
+            url: '/v1/api/cart/:productid',
             method: 'GET',
             description: `Only those who are admins or owners of that warehouse have the right to request that user's cart list`,
             request: [
@@ -41,7 +41,7 @@ export const Cart = {
             ]
         },
         {
-            url: '/v1/api/cart/:userid/:productid',
+            url: '/v1/api/cart/:productid',
             method: 'POST',
             description: `Only those who are admins or owners of that warehouse have the right to request to get the cart list. Only those who are admins or owners of that warehouse have the right to request to get that user's cart list`,
             request: [
@@ -61,7 +61,7 @@ export const Cart = {
             ]
         },
         {
-            url: '/v1/api/cart/:userid/:productid',
+            url: '/v1/api/cart/:productid',
             method: 'PUT',
             description: 'User can update quantity of product in cart',
             request: [
@@ -84,7 +84,7 @@ export const Cart = {
             ]
         },
         {
-            url: '/v1/api/cart/:userid/:productid',
+            url: '/v1/api/cart/:productid',
             method: 'DELETE',
             description: 'Just user who own their cart can delete',
             request: [
