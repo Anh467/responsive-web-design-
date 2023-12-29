@@ -1,0 +1,25 @@
+.title{
+    
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+.desc{
+    font-size: 22px;
+    line-height: 1.8;
+}
+.title, .desc, .btn{
+    margin: 3%;
+}
+body{
+    width: 40%;
+}
+.btn{
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: pink;
+    font-weight: 600;
+}

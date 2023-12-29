@@ -1,0 +1,7 @@
+input:checked ~ figure{
+    visibility: hidden;
+    opacity: 0;
+}
+figure{
+    transition: 1s ease-in;
+}

@@ -1,0 +1,25 @@
+a:link{
+    color: green;
+    background-color:blue;
+  }
+  a:visited{
+    color: red;
+    background-color:blue;
+  }
+  div{
+    margin: 5%;
+  }
+  div:empty{
+    width:100px;
+    height:100px;
+    background-color:red;
+  }
+  a{
+    font-size:30px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  h2:target{
+    color:rgb(212, 0, 255);
+  }

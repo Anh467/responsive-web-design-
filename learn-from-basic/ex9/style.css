@@ -1,0 +1,13 @@
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 5px;
+}
+ul{
+    margin: 5%;
+    list-style-type: disc;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(123, 122, 122);
+    min-width: 300px;
+}
+.background-black{
+    background-color: rgb(108, 108, 108);
+}
+
+.background-red{
+    background-color: rgb(172, 117, 117);
+}
+
+.background-blue{
+    background-color: rgb(146, 146, 188);
+}
+
+.div-element{
+    width: 200px;
+    height: 200px;
+    margin: 5%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
