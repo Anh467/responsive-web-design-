@@ -1,0 +1,36 @@
+.card-avatar::before{
+    content: "";
+    border: 2px solid  rgb(255, 255, 255);
+    width: 0px;
+    height: 5px;
+    position: absolute;
+    left: 0%;
+    top: 45%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    transition-duration: 0.5s;
+}
+
+.card-avatar:hover::before{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 25px;
+    top: 34%;
+}
+
+.search::placeholder{
+    color: rgb(169, 168, 168);
+    background: #343a40;
+    border: #343a40;
+}
+
+.list-style-type-none{
+    list-style-type: none;
+}
+
+hr{
+    width: 100%;
+    border: #343a40 2px solid;
+    margin: 0px;
+    padding: 0px;
+}
